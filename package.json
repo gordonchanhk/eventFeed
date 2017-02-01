@@ -1,0 +1,19 @@
+{
+  "name": "eventfeed",
+  "version": "1.0.0",
+  "description": "Event Feed",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordonchanhk/eventFeed.git"
+  },
+  "author": "Gordon Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordonchanhk/eventFeed/issues"
+  },
+  "homepage": "https://github.com/gordonchanhk/eventFeed#readme"
+}
