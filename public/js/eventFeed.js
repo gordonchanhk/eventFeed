@@ -23,6 +23,10 @@ $(document).ready( function() {
     console.log( data );
   });
 
+  socket.emit('connect', {
+    domain: document.domain
+  });
+
   $('#btn').on("click", function() {
 
   	var productId = $("#txt").val();
