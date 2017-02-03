@@ -14,6 +14,10 @@ A module to provide customer event feed.
 1. linkup the heroku app with your github repo (if you fork this repo to your own repo)
 1. deploy the repo to Heroku and start run
 
+## Example:
+1. https://subtlebytes.herokuapp.com/
+1. Open console for log
+
 ## Rough explanation
 1. So far you should only see there is a text field / dropdown and a submit button. Try open your heroku app in multiple browser tabs with console panel open.
 1. Try type something and select a dropdown option and click the button.
