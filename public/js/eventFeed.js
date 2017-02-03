@@ -30,7 +30,9 @@ $(document).ready( function() {
     console.log( data );
   });
 
-  eventFeedApp.connect();
+  socket.on('connect', function () { 
+    eventFeedApp.connect();
+  });
 
   $('#btn').on("click", function() {
 
