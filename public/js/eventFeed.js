@@ -15,7 +15,7 @@ EventFeed.prototype.sendSignal = function( action, productId ) {
 // ===============================
 
 $(document).ready( function() {
-  var socket = io.connect('http://localhost:8000/eventFeed');
+  var socket = io.connect( process.env.endPoint );
   var eventFeedApp = new EventFeed(socket);
 
   socket.on('update', function( data ) {
