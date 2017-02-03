@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/gordonchanhk/eventFeed/issues"
   },
-  "homepage": "https://github.com/gordonchanhk/eventFeed#readme"
+  "homepage": "https://github.com/gordonchanhk/eventFeed#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "mime": "^1.3.4",
+    "path": "^0.12.7"
+  }
 }
