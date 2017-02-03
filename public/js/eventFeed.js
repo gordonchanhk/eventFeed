@@ -6,7 +6,7 @@ EventFeed.prototype.connect = function(  ) {
   var data = {
     domain: document.domain
   };
-  this.socket.emit('connect', data);
+  this.socket.emit('join', data);
 };
 
 EventFeed.prototype.sendSignal = function( action, productId ) {
@@ -31,7 +31,7 @@ $(document).ready( function() {
   });
 
   socket.on('connect', function () { 
-    eventFeedApp.connect();
+    eventFeedApp.join();
   });
 
   $('#btn').on("click", function() {
