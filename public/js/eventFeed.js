@@ -2,7 +2,7 @@ var EventFeed = function(socket) {
   this.socket = socket;
 };
 
-EventFeed.prototype.connect = function(  ) {
+EventFeed.prototype.join = function(  ) {
   var data = {
     domain: document.domain
   };
