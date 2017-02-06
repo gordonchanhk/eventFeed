@@ -19,7 +19,6 @@ function onRequest(req, res) {
 	}
 	var absPath = './' + filePath;
 	if ( ! router.route(pathname, res) ) {
-		console.log('serve static');
 		serveStatic.serveStatic(res, cache, absPath);
 	}
 }
