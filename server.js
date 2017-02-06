@@ -1,4 +1,6 @@
 var http = require('http');
+var url = require("url");
+var router = require("./lib/handler/route");
 
 var cache = {};
 var port = process.env.PORT || 8000;
@@ -6,16 +8,22 @@ var serveStatic = require('./lib/serveStaticFnc');
 
 require('./lib/serveStaticFnc');
 
-var server = http.createServer(function(req, res) {
+function onRequest(req, res) {
 	var filePath = false;
+	var pathname = url.parse(req.url).pathname;
+
 	if (req.url == '/') {
 		filePath = 'public/index.html';
 	} else {
 		filePath = 'public' + req.url;
 	}
 	var absPath = './' + filePath;
-	serveStatic.serveStatic(res, cache, absPath);
-});
+	if ( ! router.route(pathname, res) ) {
+		serveStatic.serveStatic(res, cache, absPath);
+	}
+}
+
+var server = http.createServer(onRequest);
 
 
 server.listen(port, function() {
